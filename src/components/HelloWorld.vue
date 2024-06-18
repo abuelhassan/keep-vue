@@ -1,27 +1,22 @@
 <script setup>
 import {ref} from "vue";
 import HeaderLayout from './HeaderLayout.vue'
+import NoteInput from "./NoteInput.vue"
 
-const currentNote = ref('')
 const notes = ref([])
 
-function onclick() {
-  if (currentNote.value.length === 0) {
-    return;
+function saveNote(note) {
+  if (note.length === 0) {
+    return
   }
-  notes.value.push({
-    id: notes.value.length,
-    note: currentNote.value
-  })
-  currentNote.value = ''
+  notes.value.push(note)
 }
 </script>
 
 <template>
   <HeaderLayout/>
-  <textarea v-model="currentNote"/>
-  <button @click="onclick">Add</button>
-  <div v-for="obj in notes" :key="obj.id">{{obj.note}}</div>
+  <NoteInput @save="saveNote"/>
+  <div v-for="(note, index) in notes" :key="index">{{note}}</div>
 </template>
 
 <style scoped>
