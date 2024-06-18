@@ -3,9 +3,8 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <HelloWorld msg="Keep me organized"></HelloWorld>
+  <HelloWorld/>
 </template>
 
 <style scoped>
-
 </style>
