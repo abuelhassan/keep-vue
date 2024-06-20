@@ -2,6 +2,8 @@
 import {ref} from "vue";
 import HeaderLayout from './HeaderLayout.vue'
 import NoteInput from "./NoteInput.vue"
+import NotesLayout from "./NotesLayout.vue"
+import NoteItem from "./NoteItem.vue"
 
 const notes = ref([])
 
@@ -16,7 +18,9 @@ function saveNote(note) {
 <template>
   <HeaderLayout/>
   <NoteInput @save="saveNote"/>
-  <div v-for="(note, index) in notes" :key="index">{{note}}</div>
+  <NotesLayout>
+    <NoteItem v-for="(note, index) in notes" :key="index">{{note}}</NoteItem>
+  </NotesLayout>
 </template>
 
 <style scoped>
