@@ -8,7 +8,7 @@ import NoteItem from "./NoteItem.vue"
 const notes = ref([])
 
 function saveNote(note) {
-  if (note.length === 0) {
+  if (note.title.trim() === ""  && note.body.trim() === "") {
     return
   }
   notes.value.push(note)
@@ -19,7 +19,9 @@ function saveNote(note) {
   <HeaderLayout/>
   <NoteInput @save="saveNote"/>
   <NotesLayout>
-    <NoteItem v-for="(note, index) in notes" :key="index" :title="note">{{note}}</NoteItem>
+    <NoteItem v-for="({title, body}, index) in notes" :key="index" :title="title">
+      {{body}}
+    </NoteItem>
   </NotesLayout>
 </template>
 
