@@ -1,9 +1,12 @@
 <script setup>
-
+defineProps(['title'])
 </script>
 
 <template>
-  <div class="item"><slot/></div>
+  <div class="item">
+    <div class="title">{{title}}</div>
+    <div class="content"><slot/></div>
+  </div>
 </template>
 
 <style scoped>
@@ -14,5 +17,11 @@
     padding: 12px 16px 12px 16px;
     border: 1px darkkhaki solid;
     border-radius: 5px;
+  }
+  .content {
+    padding: 12px 0;
+  }
+  .title {
+    font-size: 20px;
   }
 </style>

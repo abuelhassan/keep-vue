@@ -19,7 +19,7 @@ function saveNote(note) {
   <HeaderLayout/>
   <NoteInput @save="saveNote"/>
   <NotesLayout>
-    <NoteItem v-for="(note, index) in notes" :key="index">{{note}}</NoteItem>
+    <NoteItem v-for="(note, index) in notes" :key="index" :title="note">{{note}}</NoteItem>
   </NotesLayout>
 </template>
 
