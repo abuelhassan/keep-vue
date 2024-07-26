@@ -17,7 +17,9 @@ function saveNote(note) {
 
 <template>
   <HeaderLayout/>
-  <NoteInput @save="saveNote"/>
+  <div class="note-input-container">
+    <NoteInput @save="saveNote"/>
+  </div>
   <NotesLayout>
     <NoteItem v-for="({title, body}, index) in notes" :key="index" :title="title">
       {{body}}
@@ -26,4 +28,9 @@ function saveNote(note) {
 </template>
 
 <style scoped>
+.note-input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 </style>
