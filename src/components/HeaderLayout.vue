@@ -8,7 +8,7 @@ import HeaderLogo from "./HeaderLogo.vue";
       <HeaderLogo/>
       <div class="title">Keep me organized!</div>
     </div>
-    <hr/>
+    <hr class="separator"/>
   </header>
 </template>
 
@@ -26,5 +26,8 @@ import HeaderLogo from "./HeaderLogo.vue";
   .title {
     font-size: 40px;
     color: darkkhaki;
+  }
+  hr.separator {
+    border-color: darkkhaki;
   }
 </style>
