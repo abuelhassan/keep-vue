@@ -17,7 +17,7 @@ function saveNote(note) {
 
 <template>
   <HeaderLayout/>
-  <div class="note-input-container">
+  <div class="input-container">
     <NoteInput @save="saveNote"/>
   </div>
   <NotesLayout>
@@ -28,9 +28,9 @@ function saveNote(note) {
 </template>
 
 <style scoped>
-.note-input-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+  .input-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 </style>
