@@ -1,11 +1,9 @@
 <script setup>
-import HeaderLogo from "./HeaderLogo.vue";
 </script>
 
 <template>
   <header>
     <div class="container">
-      <HeaderLogo/>
       <div class="title">Keep me organized!</div>
     </div>
     <hr class="separator"/>
