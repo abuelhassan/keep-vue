@@ -8,8 +8,8 @@
 </template>
 
 <style scoped>
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>

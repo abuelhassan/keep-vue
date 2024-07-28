@@ -35,7 +35,7 @@ function saveNote(note) {
   </div>
   <NotesLayout>
     <NoteItem v-for="([title, body], index) in notes" :key="index" :title="title">
-      {{ body}}
+      {{ body }}
     </NoteItem>
   </NotesLayout>
 </template>

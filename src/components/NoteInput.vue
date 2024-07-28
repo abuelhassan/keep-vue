@@ -24,45 +24,51 @@ function onclick() {
 </template>
 
 <style scoped>
-  .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 5px;
-    border: 1px solid darkkhaki;
-    width: 320px;
-    padding: 12px 16px;
-  }
-  .transparent-input {
-    width: 300px;
-    background-color: unset;
-    color: inherit;
-    font: inherit;
-    margin-bottom: 3px;
-    border-style: none;
-  }
-  .transparent-input:focus {
-    outline: unset;
-  }
-  textarea.transparent-input {
-    resize: none;
-    height: 100px;
-    scrollbar-width: thin;
-    scrollbar-color: darkkhaki transparent;
-  }
-  input.transparent-input {
-    overflow: clip;
-  }
-  .title {
-    font-size: 20px;
-    margin-bottom: 9px;
-  }
-  button {
-    border: none;
-    background-color: darkkhaki;
-    border-radius: 20px;
-    font-family: inherit;
-    cursor: pointer;
-    color: #202124;
-  }
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid darkkhaki;
+  width: 320px;
+  padding: 12px 16px;
+}
+
+.transparent-input {
+  width: 300px;
+  background-color: unset;
+  color: inherit;
+  font: inherit;
+  margin-bottom: 3px;
+  border-style: none;
+}
+
+.transparent-input:focus {
+  outline: unset;
+}
+
+textarea.transparent-input {
+  resize: none;
+  height: 100px;
+  scrollbar-width: thin;
+  scrollbar-color: darkkhaki transparent;
+}
+
+input.transparent-input {
+  overflow: clip;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+button {
+  border: none;
+  background-color: darkkhaki;
+  border-radius: 20px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #202124;
+}
 </style>
